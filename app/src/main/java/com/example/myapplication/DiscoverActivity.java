@@ -5,6 +5,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.TextView;
+
 import com.android.volley.toolbox.JsonObjectRequest;
 
 import com.android.volley.RequestQueue;
@@ -21,9 +23,12 @@ public class DiscoverActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_discover);
+        callMyAPI(R.id.title);
     }
 
-    public void callMyAPI() {
+    public void callMyAPI(int field_id) {
+        TextView tv = (TextView) findViewById(field_id);
+
         String url = "https://jsonplaceholder.typicode.com/todos/1";
 
         JsonObjectRequest jsonObjectRequest = new JsonObjectRequest( url, null, new Response.Listener<JSONObject>() {
@@ -34,7 +39,7 @@ public class DiscoverActivity extends AppCompatActivity {
                     int id = response.getInt("id");
                     String title = response.getString("title");
                     boolean completed = response.getBoolean("completed");
-
+                    tv.setText(userId+"\n"+id+"\n"+title+"\n"+completed);
                 } catch (JSONException e) {
                     e.printStackTrace();
                 }
