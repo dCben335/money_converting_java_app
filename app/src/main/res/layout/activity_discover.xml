@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#D0E12D"
+    android:background="@color/primary_100"
     tools:context=".MainActivity">
 
     <RelativeLayout
@@ -19,13 +19,14 @@
             android:layout_centerHorizontal="true"
             android:layout_centerVertical="true"
             android:text="Discover"
-            android:textColor="#fff" />
+            android:textColor="@color/primary_800" />
 
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
             android:layout_centerVertical="true"
+            android:textColor="@color/primary_800"
             android:background="@android:color/transparent"
             android:text="?" />
     </RelativeLayout>
@@ -36,7 +37,10 @@
         android:layout_height="match_parent"
         android:layout_above="@id/footer"
         android:layout_below="@+id/header"
-        android:padding="16dp">
+        android:padding="24dp">
+
+        <include layout="@layout/component_card"/>
+
 
         <TextView
             android:id="@+id/title"
