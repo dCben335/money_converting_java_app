@@ -1,27 +1,27 @@
-package com.example.myapplication;
+package com.example.myapplication.activities;
 
-import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.TextView;
 
+import com.example.myapplication.globals.ApiCall;
+import com.example.myapplication.R;
+import com.example.myapplication.globals.layout.Main;
+
 import org.json.JSONException;
 import org.json.JSONObject;
-import org.w3c.dom.Text;
 
 
-public class DiscoverActivity extends AppCompatActivity {
+public class Converter extends Main {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_discover);
+        loadContent(this, R.layout.converter);;
 
         handleAPIData();
     }
 
     public void handleAPIData() {
-
-        ApiCall.fetchData("https://jsonplaceholder.typicode.com/todos/1", new ApiCallback() {
-            @Override
+        ApiCall.makeApiCall("https://jsonplaceholder.typicode.com/todos/1", new ApiCall.ApiCallback() {
             public void onSuccess(JSONObject response) {
                 try {
                     TextView TextTag = findViewById( R.id.title );
@@ -32,11 +32,9 @@ public class DiscoverActivity extends AppCompatActivity {
                     e.printStackTrace();
                 }
             }
-
-            @Override
             public void onError(String errorMessage) {
                 // Handle API call error
             }
-        }, DiscoverActivity.this);
+        }, Converter.this);
     }
 }

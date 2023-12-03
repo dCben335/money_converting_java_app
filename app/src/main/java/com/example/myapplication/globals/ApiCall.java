@@ -1,4 +1,4 @@
-package com.example.myapplication;
+package com.example.myapplication.globals;
 
 import android.content.Context;
 
@@ -9,13 +9,11 @@ import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.Volley;
 import org.json.JSONObject;
 
-interface ApiCallback {
-    void onSuccess(JSONObject response);
-    void onError(String errorMessage);
-}
+
+
 public class ApiCall {
 
-    public static void fetchData(String url, ApiCallback callbackFunctions, Context context) {
+    public static void makeApiCall(String url, ApiCallback callbackFunctions, Context context) {
         JsonObjectRequest request = new JsonObjectRequest(
             url,
             null,
@@ -35,5 +33,12 @@ public class ApiCall {
 
         RequestQueue requestQueue = Volley.newRequestQueue(context);
         requestQueue.add(request);
+    }
+
+
+    public static interface ApiCallback {
+        void onSuccess(JSONObject response);
+
+        void onError(String errorMessage);
     }
 }

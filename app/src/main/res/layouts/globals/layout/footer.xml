@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="wrap_content"
+    android:layout_width="match_parent"
+    android:orientation="horizontal"
+    android:gravity="center"
+    android:padding="10dp"
+    android:background="@drawable/footer"
+    android:elevation="3dp"
+    >
+    <ImageButton
+        android:id="@+id/btnMap"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:background="@drawable/map"
+        android:backgroundTint="@color/primary_100"
+        android:layout_marginRight="35dp"
+        android:onClick="onClickMap"
+    />
+    <ImageButton
+        android:id="@+id/btnHome"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:background="@drawable/home"
+        android:backgroundTint="@color/primary_100"
+        android:onClick="onClickHome"
+    />
+    <ImageButton
+        android:id="@+id/btnConverter"
+
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:background="@drawable/converter"
+        android:backgroundTint="@color/primary_100"
+        android:layout_marginLeft="35dp"
+        android:onClick="onConverterButtonClick"
+    />
+
+</LinearLayout>
