@@ -5,13 +5,14 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/primary_100"
-    tools:context=".MainActivity">
-
+    tools:context=".MainActivity"
+>
     <RelativeLayout
         android:id="@+id/header"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        tools:context=".MainActivity">
+        tools:context=".MainActivity"
+    >
 
         <TextView
             android:layout_width="wrap_content"
@@ -19,7 +20,9 @@
             android:layout_centerHorizontal="true"
             android:layout_centerVertical="true"
             android:text="Discover"
-            android:textColor="@color/primary_800" />
+            android:textColor="@color/primary_800"
+        />
+
 
         <Button
             android:layout_width="wrap_content"
@@ -28,7 +31,8 @@
             android:layout_centerVertical="true"
             android:textColor="@color/primary_800"
             android:background="@android:color/transparent"
-            android:text="?" />
+            android:text="?"
+        />
     </RelativeLayout>
 
     <RelativeLayout
@@ -49,16 +53,8 @@
             android:layout_centerHorizontal="true"
             android:textAlignment="center"
             android:textColor="#fff"
-            android:textSize="40sp" />
-
-        <Button
-            android:id="@+id/callButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerVertical="true"
-            android:background="@android:color/transparent"
-            android:text="API Test"
-            android:textSize="30sp" />
+            android:textSize="40sp"
+        />
 
     </RelativeLayout>
 
