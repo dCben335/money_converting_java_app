@@ -12,13 +12,59 @@
         android:id="@+id/main"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_above="@id/footer"
-        android:layout_below="@+id/header"
         android:padding="24dp">
 
-        <include layout="@layout/component_card"/>
+        <ImageView
+            android:id="@+id/convert_img"
+            android:layout_alignParentTop="true"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:src="@drawable/money_converting"
+            android:contentDescription="convertion d'argent"
+        />
 
+        <RelativeLayout
+            android:id="@+id/selects"
+            android:paddingTop="10dp"
+            android:layout_below="@+id/convert_img"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+        >
+            <Spinner
+                android:id="@+id/first_options"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:background="@color/primary_900"
+                android:padding="5dp"
+                android:minWidth="100dp"
+                android:minHeight="48dp"
+            />
 
+            <Spinner
+                android:layout_alignParentRight="true"
+                android:id="@+id/second_options"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/primary_900"
+                android:padding="5dp"
+                android:minWidth="100dp"
+                android:minHeight="48dp"
+            />
+
+        </RelativeLayout>
+        <Button
+            android:id="@+id/submit_btn"
+            android:layout_below="@+id/selects"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_alignParentEnd="true"
+            android:background="@android:color/transparent"
+            android:text="Effectuer"
+            android:textStyle="bold"
+            android:textSize="40sp"
+        />
         <TextView
             android:id="@+id/title"
             android:layout_width="wrap_content"
