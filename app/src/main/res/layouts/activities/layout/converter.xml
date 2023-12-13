@@ -7,7 +7,9 @@
     android:layout_height="match_parent"
     android:background="@color/primary_100"
     tools:context=".activities.Home"
->
+    android:padding="16dp"
+
+    >
     <RelativeLayout
         android:id="@+id/main"
         android:layout_width="match_parent"

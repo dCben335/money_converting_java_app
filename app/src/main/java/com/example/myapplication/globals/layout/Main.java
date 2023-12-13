@@ -14,7 +14,6 @@ public class Main extends AppCompatActivity {
     protected void loadContent( Context context, int activityLayout) {
         setContentView(R.layout.main);
         FrameLayout container = findViewById(R.id.main_container);
-
         View activityContent = LayoutInflater.from(context).inflate(
             activityLayout,
             container,

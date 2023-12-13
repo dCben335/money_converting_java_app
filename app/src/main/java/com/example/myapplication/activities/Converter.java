@@ -23,14 +23,7 @@ public class Converter extends Main {
     public void handleAPIData() {
         ApiCall.makeApiCall("https://jsonplaceholder.typicode.com/todos/1", new ApiCall.ApiCallback() {
             public void onSuccess(JSONObject response) {
-                try {
-                    TextView TextTag = findViewById( R.id.title );
-                    int test = response.getInt("userId");
-                    TextTag.setText(String.valueOf(test));
 
-                }  catch (JSONException e) {
-                    e.printStackTrace();
-                }
             }
             public void onError(String errorMessage) {
                 // Handle API call error
